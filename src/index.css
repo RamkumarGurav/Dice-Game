@@ -1,13 +1,149 @@
-body {
+*,
+*::before,
+*::after {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body {
+  scroll-behavior: smooth;
+  text-align: center;
+  /* height: 100vh; */
+  padding: 1% 10%;
+  background-color: black;
+  background-image: url("https://wallpaperaccess.com/full/1717350.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  color: white;
+  font-family: "Press Start 2P", cursive;
+}
+
+.contain {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  min-height: 100vh;
+}
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
+
+  font-size: 2.5rem;
+}
+.main {
+  margin: 20px auto;
+  max-width: 600px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.left {
+  margin-right: 10px;
+}
+
+.main img {
+  width: 80%;
+}
+.main h1 {
+  margin: 30px;
+  font-size: 23px;
+}
+
+.roll {
+  width: 300px;
+  margin: 0 auto;
+  margin-top: 20px;
+
+  font-size: 2rem;
+  /* font-family: 'Montserrat', sans-serif; */
+  color: rgb(37, 26, 66);
+  font-weight: 800;
+  background-color: rgb(255, 238, 6);
+  outline: none;
+  transition: all 0.2s;
+}
+
+.roll:active {
+  transform: scale(1.4);
+}
+
+.rotate {
+  animation: mymove 2s 0.1s;
+}
+
+@keyframes mymove {
+  50% {
+    transform: rotate(720deg);
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .main img {
+    width: 100px;
+  }
+  .header {
+    font-size: 0.8rem;
+  }
+  .main h1 {
+    font-size: 1rem;
+  }
+
+  .roll{
+    font-size: 18px;
+    padding: 10px 10px;
+    width: 80%;
+  }
+
+  #footer > p{
+    font-size: 10px;
+  }
+}
+
+/* -------------footer------ */
+
+#footer {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: #bbb7b7;
+  margin-top: 80px;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.social-icons a {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  color: #ababab;
+  transition: opacity 0.5s;
+
+}
+.social-icons i {
+  font-size: 1.5rem;
+}
+.social-icons a:hover {
+  color: #ffde4c;
+  transform: translateY(-5px);
+}
+
+#footer p {
+  margin-top: 10px;
+  text-align: center;
+}
+
+#footer i {
+  margin-right: 15px;
+  margin-left: 15px;
 }
